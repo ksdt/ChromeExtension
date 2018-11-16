@@ -1,7 +1,7 @@
 {
   "name": "KSDT Live",
   "version": "1.0",
-  "description": "Chrome extension to listen to the live KSDT stream. AKA listen to some groovy tunes, man.",
+  "description": "Chrome extension to listen to the KSDT live stream. AKA listen to some groovy tunes, man.",
   "manifest_version": 2,
 
   "browser_action":{

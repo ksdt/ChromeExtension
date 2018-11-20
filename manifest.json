@@ -9,6 +9,9 @@
     "default_icon": "ksdtBus.png",
     "default_popup": "popup.html"
   },
+  "background": {
+    "scripts": ["background.js"]
+  },
   "permissions": [
       "tabs", "https://ksdt.ucsd.edu/stream.mp3"
     ]

@@ -3,11 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>KSDT Live</title>
-    <!--  <script src="popup.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <style>
+      body {display: flex; flex-direction: row;}
+      #logo {width:90px; height:100%}
+      #playButton {height:32px; width:32px;vertical-align:text-bottom}
+      #playButton:hover {opacity: 0.75}
+  @-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+    </style>
   </head>
   <body>
-    <audio controls>
-      <source src="https://ksdt.ucsd.edu/stream.mp3">
-    </audio>
+    <a href="https://ksdt.ucsd.edu/" target="_blank">
+      <img src="LOGO.png" alt="KSDT" id="logo">
+    </a>
+    <!--<p style="font-family:'Comfortaa',cursive;font-size:28px; margin:0">KSDT</p>-->
+    <img src="play.png" alt"Play/Pause" id="playButton">
   </body>
+  <script src='popup.js'></script>
 </html>

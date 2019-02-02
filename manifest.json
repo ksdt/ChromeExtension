@@ -1,8 +1,7 @@
 {
   "name": "KSDT Live",
-  "version": "1.0",
-  "description": "Chrome extension to listen to the live KSDT stream.
-                  AKA listen to some groovy tunes, man.",
+  "version": "1.1",
+  "description": "Chrome extension to listen to the live KSDT stream. AKA listen to some groovy tunes, man.",
   "manifest_version": 2,
 
   "browser_action":{
@@ -13,6 +12,7 @@
     "scripts": ["background.js"]
   },
   "permissions": [
-      "tabs", "https://ksdt.ucsd.edu/stream.mp3"
+      "activeTab", "https://ksdt.ucsd.edu/stream.mp3"
     ]
 }
+ 

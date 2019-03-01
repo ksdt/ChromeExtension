@@ -1,0 +1,24 @@
+body { 
+    display: flex; 
+    flex-direction: row;
+} 
+#logo {
+    width: 90px;
+    height: 100%;
+}
+#play {
+    height: 32px;
+    width: 32px;
+    vertical-align: text-bottom;
+}
+#pause {
+    height: 32px;
+    width: 32px;
+    vertical-align: text-bottom;
+}
+#play:hover {
+    opacity: 0.75;
+}
+#pause:hover {
+    opacity: 0.75;
+}

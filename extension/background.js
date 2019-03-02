@@ -2,7 +2,7 @@
 window.addEventListener("load", function() {
 let aux = document.createElement('audio');
 // five minutes has passed boolean
-let playId = document.getElementById('play');
+//  et playId = document.getElementById('play');
 let fivePassed = false;
 let timer;
 aux.type = 'audio/mp3';
@@ -11,7 +11,8 @@ function fiveMinuteTimer(){
 	fivePassed = true;
 	console.log(fivePassed);
 	// change play button to live to show user it will be resynching
-	playId.src='live_button2.png';
+	//document.getElementById('play').src='live_button2.png';
+	chrome.runtime.sendMessage({greeting: "changeButton"});
 }
 
 // handles requests sent from popup.js
@@ -24,9 +25,10 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 		if (fivePassed && aux.hasAttribute('src')) {
 			console.log("playing");
 			aux.removeAttribute('src');
-			aux.load(); // necessary? 
+			//aux.load(); // necessary? 
 			// change live button back to play
-			playId.src='play_button.png';
+			//document.getElementById('play').src='play_button.png';
+			chrome.runtime.sendMessage({greeting: "changeButton"});
 		}
 
 		// if five minutes haven't gone by quit boolean function and just play

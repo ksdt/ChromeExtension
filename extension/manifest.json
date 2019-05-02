@@ -5,13 +5,13 @@
   "manifest_version": 2,
 
   "browser_action": {
-    "default_icon": "ksdt_button.png",
+    "default_icon": "./images/ksdt_button.png",
     "default_popup": "popup.html"
   },
 
   "background" : {
     "persistent" : true,
-    "scripts" : [ "background.js" ]
+    "scripts" : [ "./scripts/background.js" ]
   },
   "permissions": [
     "activeTab", "https://ksdt.ucsd.edu/stream.mp3"

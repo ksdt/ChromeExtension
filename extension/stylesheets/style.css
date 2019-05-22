@@ -1,24 +1,66 @@
-body { 
-    display: flex; 
-    flex-direction: row;
-} 
+body {
+    /*background-color: black;*/
+    width: 200px;
+    height: 100px;
+}
+
 #logo {
     width: 90px;
     height: 100%;
 }
+
 #play {
     height: 32px;
     width: 32px;
+    float: left;
     vertical-align: text-bottom;
 }
+
 #pause {
     height: 32px;
     width: 32px;
+    float: left;
     vertical-align: text-bottom;
 }
-#play:hover {
-    opacity: 0.75;
+
+#stop {
+    height: 32px;
+    width: 32px;
+    float: right;
+    vertical-align: text-bottom;
 }
-#pause:hover {
+
+#play:hover {
+    cursor: pointer;
     opacity: 0.75;
+    transition: all 0.3s ease;
+}
+
+#pause:hover {
+    cursor: pointer;
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+
+#stop:hover {
+    cursor: pointer;
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+
+.title {
+    height: 32px;
+}
+
+.buttons {
+    position: fixed;
+    top: 45px;
+}
+
+.broadcast { 
+    border: 1px solid transparent;
+    border-radius: 500px;
+    background-color: white;
+    width: 25%;
+    text-align: center;
 }

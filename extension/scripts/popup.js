@@ -6,4 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('pause').addEventListener('click', function() {
 		chrome.extension.sendMessage({action: 'pause'});
 	});
+	document.getElementById('stop').addEventListener('click', function() {
+		chrome.extension.sendMessage({action: 'stop'});
+	});
 });

@@ -4,11 +4,29 @@
 		<meta charset="utf-8">
 		<title>KSDT Live</title>
 		<script src="./scripts/popup.js"></script>
+		<script src="./scripts/resources.js"></script>
+		<audio
+			id="stream"
+			src="https://ksdt.ucsd.edu/stream.mp3"
+		    >
+		</audio>
 		<link rel="stylesheet" type="text/css" href="./stylesheets/style.css"/>
 	</head>
 	<body>
-		<img id="play" src="./images/play_button.png">
-		<img id="pause" src="./images/stop_button.png">
+		<div class="title">
+			<a href="https://ksdt.ucsd.edu" target="_blank">
+			  <img id="logo" src="./images/logo.png">
+			</a>
+		</div>
+		<div class="buttons">
+				<img id="play" src="./images/play_button.png">
+				<img id="pause" src="./images/pause_button.png">
+			<img id="stop" src="./images/stop_button.png">
+		</div>
+		<div class="broadcast">
+			LIVE
+		</div>
+		<div class="volume">
+		</div>
 	</body>
-	<script type="text/javascript" src="./scripts/popup.js"> </script>
 </html>

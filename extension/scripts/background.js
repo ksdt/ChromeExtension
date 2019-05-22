@@ -1,7 +1,9 @@
 window.addEventListener("load", function() {
-	let aux = document.getElementById("stream");
+	var aux = document.createElement('audio');
+	aux.type='audio/mp3';
+	aux.src= 'https://ksdt.ucsd.edu/stream.mp3';
 	
-	let loaded = false;
+	var loaded = false;
 
 	if (loaded == false)
 	{

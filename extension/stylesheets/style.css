@@ -1,20 +1,29 @@
 body {
-    background-color: black;
     width: 250px;
     height: 70px;
 }
 
 .title {
     height: 32px;
+    position: fixed;
 }
 
 .buttons {
-    position: fixed;
     top: 45px;
+    position: fixed;
 }
 
 .broadcast {
-    float: right;
+    top: 15px;
+    left: 223px;
+    position: fixed;
+    background-color: white;
+}
+
+.volume {
+    top: 45px;
+    left: 195px;
+    position: fixed;
     background-color: white;
 }
 
@@ -70,5 +79,31 @@ body {
     height: 10px;
     display: inline-block;
     background-color: red;
+    border-radius: 500px;
+}
+
+#myRange {
+    width: 60px;
+    height: 26px;
+    -webkit-appearance: none;
+    background: black;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 500px;
+}
+
+#myRange:hover {
+    opacity: 1;
+}
+
+#myRange::-webkit-slider-thumb {
+    width: 21px;
+    height: 21px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: white;
+    cursor: pointer;
     border-radius: 500px;
 }

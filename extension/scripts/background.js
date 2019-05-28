@@ -1,15 +1,19 @@
 window.addEventListener('load', function() {
-	var aux = document.getElementById("stream");
-	
-	var loaded = false;
+	var aux = document.createElement('audio');
 
-	if (loaded == false)
-	{
-		aux.load();
-		loaded = true;
-	}
+	aux.type = 'audio/mp3';
+	aux.src = 'https://ksdt.ucsd.edu/stream.mp3';
+
+	var loaded;
 
 	chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
+
+		if (loaded == false)
+		{
+			aux.load();
+			loaded = true;
+		}
+
 		if (request.action == 'play') 
 		{
 			aux.play();

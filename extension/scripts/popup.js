@@ -6,6 +6,11 @@ function toggle(button)
 	{
 		button.src='./images/pause_button.png';
 		button.id="pause";
+		status="pause";
+
+		button.addEventListener('click', function() {
+			chrome.extension.sendMessage({action: 'pause'});
+		});
 
 		live.style.backgroundColor="gray";
 	}
@@ -13,6 +18,11 @@ function toggle(button)
 	{
 		button.src='./images/play_button.png';
 		button.id="play";
+		status="play";
+
+		button.addEventListener('click', function() {
+	    	chrome.extension.sendMessage({action: 'play'});
+		});
 
 		live.style.backgroundColor="red";
 	}
@@ -21,12 +31,9 @@ function toggle(button)
 }
 
 // sends requests to background.js once popup.html loads
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('play').addEventListener('click', function() {
-		chrome.extension.sendMessage({action: 'play'});
-	});
-	document.getElementById('pause').addEventListener('click', function() {
-		chrome.extension.sendMessage({action: 'pause'});
+	    chrome.extension.sendMessage({action: 'play'});
 	});
 	document.getElementById('stop').addEventListener('click', function() {
 		chrome.extension.sendMessage({action: 'stop'});

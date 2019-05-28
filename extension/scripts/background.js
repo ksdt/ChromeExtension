@@ -1,5 +1,7 @@
 window.addEventListener('load', function() {
 	var aux = document.createElement('audio');
+	var live = document.getElementById("circle");
+
 
 	aux.type = 'audio/mp3';
 	aux.src = 'https://ksdt.ucsd.edu/stream.mp3';
@@ -12,6 +14,7 @@ window.addEventListener('load', function() {
 		{
 			aux.load();
 			loaded = true;
+			live.style.backgroundColor="red";
 		}
 
 		if (request.action == 'play') 
@@ -21,6 +24,7 @@ window.addEventListener('load', function() {
 		else if (request.action == 'pause')
 		{
 			aux.pause();
+			live.style.backgroundColor="gray";
 		}
 		else if (request.action == 'stop') 
 		{

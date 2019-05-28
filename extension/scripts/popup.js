@@ -1,14 +1,20 @@
 function toggle(button)
 {
+	var live = document.getElementById("circle");
+
 	if (button.id != "pause")
 	{
 		button.src='./images/pause_button.png';
 		button.id="pause";
+
+		live.style.backgroundColor="gray";
 	}
 	else if (button.id == "pause")
 	{
 		button.src='./images/play_button.png';
 		button.id="play";
+
+		live.style.backgroundColor="red";
 	}
 
 	return false;

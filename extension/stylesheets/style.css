@@ -1,7 +1,21 @@
 body {
     background-color: black;
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: 70px;
+}
+
+.title {
+    height: 32px;
+}
+
+.buttons {
+    position: fixed;
+    top: 45px;
+}
+
+.broadcast {
+    float: right;
+    background-color: white;
 }
 
 #logo {
@@ -51,11 +65,10 @@ body {
     transition: all 0.3s ease;
 }
 
-.title {
-    height: 32px;
-}
-
-.buttons {
-    position: fixed;
-    top: 45px;
+#circle {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: red;
+    border-radius: 500px;
 }

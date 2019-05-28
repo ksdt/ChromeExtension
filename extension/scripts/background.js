@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
 		{
 			aux.play();
 		}
-		else if (request.action == 'pause') 
+		else if (request.action == 'pause')
 		{
 			aux.pause();
 		}

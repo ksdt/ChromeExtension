@@ -1,5 +1,21 @@
+function toggle(button)
+{
+	if (button.id != "pause")
+	{
+		button.src='./images/pause_button.png';
+		button.id="pause";
+	}
+	else if (button.id == "pause")
+	{
+		button.src='./images/play_button.png';
+		button.id="play";
+	}
+
+	return false;
+}
+
 // sends requests to background.js once popup.html loads
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
 	document.getElementById('play').addEventListener('click', function() {
 		chrome.extension.sendMessage({action: 'play'});
 	});
@@ -8,5 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	document.getElementById('stop').addEventListener('click', function() {
 		chrome.extension.sendMessage({action: 'stop'});
+	});
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+	var button = document.getElementById("play");
+
+	button.addEventListener('click', function() { 
+		toggle(button);
 	});
 });

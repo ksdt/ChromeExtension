@@ -1,5 +1,7 @@
 function toggle(button)
 {
+	var live = document.getElementById("circle");
+
 	if (button.id != "pause")
 	{
 		button.src='./images/pause_button.png';
@@ -19,13 +21,19 @@ function toggle(button)
 		button.addEventListener('click', function() {
 	    	chrome.extension.sendMessage({action: 'play'});
 		});
+
+		live.style.backgroundColor="gray";
 	}
 }
 
 function stop(playbutton)
 {
+	var live = document.getElementById("circle");
+
 	if (playbutton.id != "pause")
 	{
+		live.style.backgroundColor="red";
+
 		return;
 	}
 	else if (playbutton.id == "pause")
@@ -37,6 +45,8 @@ function stop(playbutton)
 		playbutton.addEventListener('click', function() {
 	    	chrome.extension.sendMessage({action: 'play'});
 		});
+
+		live.style.backgroundColor="red";
 	}
 }
 
